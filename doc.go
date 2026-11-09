@@ -1,5 +1,7 @@
-// Package llmsessionreplay is a small, dependency-free Go library: Record LLM client calls to a JSONL session file and replay them strictly in order for deterministic Go tests, with request hashes, field-level mismatch errors and integrity checks
+// Package llmsessionreplay records LLM client calls to a JSONL session file
+// and replays them strictly in order for deterministic Go tests.
 //
-// The public API is every exported identifier of this root package. Functions are pure: they do
-// no I/O, keep no global mutable state and report invalid input through returned errors.
+// Use Recorder to wrap a real Client and record interactions. Use Replayer
+// to read the recorded file and replay responses for matching requests.
+// Mismatch errors identify the first differing field.
 package llmsessionreplay
