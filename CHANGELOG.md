@@ -9,4 +9,5 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- Added llm-session-replay: record and replay LLM client calls with field-level mismatch errors, request hashes, and a verify CLI.
 - Initial project structure from the factory utility template.
